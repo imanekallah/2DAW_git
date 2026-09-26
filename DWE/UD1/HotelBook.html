@@ -1,29 +1,121 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>UD1-TAREA-1-Imane</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HotelBook</title>
     <script src="HotelBook.js" defer></script>
+    <link rel="stylesheet" href="HotelBook.css">
 </head>
 
 <body>
+
     <header>
         <h1>HotelBook</h1>
     </header>
 
-    <!--1. Presentar una oferta destacada-->
-    <h2 id="titulo">Bienvenidos a HotelBook</h2>
-    <p id="descripcion">En <b>HotelBook</b> encontrarás hoteles 
-         y acogedores para disfrutar de una estancia inolvidable.</p>
-    <button id="boton" onclick="verOfertaDestacada()">Ver Oferta destacada</button>
 
-    <!--2. Consultar dos alojamientos-->
-    <h2>Hoteles en Tánger</h2>
-    <img id="imagenHotel" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/d2/90/d3/fairmont-tazi-palace.jpg?w=900&h=-1&s=1" alt="">
-    <h3 id="nombreHotel">Fairmont Tazi Palace Tánger</h3>
-    <p id="descripcionHotel">Hotel de lujo de 5 estrellas situado en Tánger, con piscina, spa, restaurante y habitaciones elegantes.</p>
-    <p id="precioHotel">Desde 189 € / noche</p>
-    <p id="asteriscos">★★★★★</p>
-    <button id="boton" onclick="verOtroAlojamiento()">Ver otro alojamiento</button>
+    <!-- 1. INTRODUCCIÓN Y OFERTA DESTACADA -->
+    <section>
+        <h2 id="titulo">Bienvenidos a HotelBook</h2>
+
+        <p id="descripcion">
+            En <b>HotelBook</b> encontrarás hoteles cómodos y acogedores
+            para disfrutar de una estancia inolvidable.
+        </p>
+
+
+        <button type="button" onclick="verOferta()">
+            Ver oferta destacada
+        </button>
+    </section>
+
+
+    <!-- 2. DOS ALOJAMIENTOS -->
+    <section>
+        <h2>Hoteles en Tánger</h2>
+
+        <img id="imagenHotel" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/d2/90/d3/fairmont-tazi-palace.jpg?w=900&h=-1&s=1" 
+        alt="Fairmont Tazi Palace Tánger" width="500">
+
+        <h3 id="nombreHotel">
+            Fairmont Tazi Palace Tánger
+        </h3>
+
+        <p id="descripcionHotel">
+            Hotel de lujo de 5 estrellas situado en Tánger,
+            con piscina, spa, restaurante y habitaciones elegantes.
+        </p>
+
+        <p id="precioHotel">
+            Desde 189 € / noche
+        </p>
+
+        <p>
+            ★★★★★
+        </p>
+
+        <button type="button" onclick="cambiarHotel()">
+            Ver otro alojamiento
+        </button>
+    </section>
+
+
+    <!-- 3. CONDICIONES DE CANCELACIÓN -->
+    <section>
+        <h2>Condiciones de cancelación</h2>
+
+        <p id="condiciones">
+            Cancelación gratuita hasta 48 horas antes de la llegada.
+            Presentación normal activa.
+        </p>
+
+        <button type="button" onclick="destacarCondiciones()">
+            Destacar condiciones
+        </button>
+    </section>
+
+
+     <!--4. CONSULTA--> 
+    <section>
+        <h2>Consulta</h2>
+
+        <button type="button" onclick="registrarConsulta()">
+            Registrar consulta
+        </button>
+
+        <button type="button" onclick="mostrarEstado()">
+            Mostrar estado
+        </button>
+
+        <p id="estadoConsulta"></p>
+    </section>
+
+
+    <!-- 5. RESERVA -->
+    <section>
+        <h2>Preparar reserva</h2>
+
+        <p id="alojamientoReserva"></p>
+
+        <p id="estadoReserva"></p>
+
+        <button type="button" onclick="prepararReserva()">
+            Preparar reserva
+        </button>
+
+        <button type="button" onclick="confirmarReserva()">
+            Confirmar reserva
+        </button>
+    </section>
+
+
+    <footer>
+        <p>© 2026 HotelBook</p>
+    </footer>
+
 </body>
+
 </html>
